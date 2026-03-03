@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Wind, Refrigerator, WashingMachine, Zap, Wrench } from 'lucide-react'
@@ -11,6 +12,57 @@ const iconMap: { [key: string]: React.ElementType } = {
   WashingMachine,
   Zap,
   Wrench
+}
+
+function GalleryCard({ item, index }: { item: typeof galleryData[0], index: number }) {
+  const [imgError, setImgError] = useState(false)
+  const IconComponent = iconMap[(item as any).icon] || Wind
+  const gradient = (item as any).gradient || 'from-primary-400 to-secondary-600'
+  const imageUrl = (item as any).image
+
+  return (
+    <motion.div
+      key={item.id}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative overflow-hidden rounded-2xl aspect-square"
+    >
+      {/* Image or Gradient Fallback */}
+      {imageUrl && !imgError ? (
+        <img
+          src={imageUrl}
+          alt={item.alt || item.title}
+          onError={() => setImgError(true)}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      ) : (
+        <>
+          <div className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-transform duration-500 group-hover:scale-110`} />
+          <div className="absolute inset-0 opacity-10"
+            style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <IconComponent className="w-24 h-24 text-white/30" />
+          </div>
+        </>
+      )}
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+
+      {/* Text */}
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <h3 className="text-white font-semibold text-base md:text-lg mb-0.5 drop-shadow">
+          {item.title}
+        </h3>
+        <p className="text-gray-200 text-sm drop-shadow">
+          {item.category}
+        </p>
+      </div>
+    </motion.div>
+  )
 }
 
 export default function Gallery() {
@@ -42,52 +94,9 @@ export default function Gallery() {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayItems.map((item, index) => {
-            const IconComponent = iconMap[(item as any).icon] || Wind
-            const gradient = (item as any).gradient || 'from-primary-400 to-secondary-600'
-            
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl aspect-square"
-                role="img"
-                aria-label={(item as any).alt || item.title}
-              >
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-all duration-300 group-hover:scale-105`} />
-                
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                    backgroundSize: '24px 24px'
-                  }}
-                />
-
-                {/* Icon */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <IconComponent className="w-24 h-24 text-white/30 transition-transform duration-300 group-hover:scale-110" />
-                </div>
-
-                {/* Content Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                
-                {/* Text Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white font-semibold text-lg mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm">
-                    {item.category}
-                  </p>
-                </div>
-              </motion.div>
-            )
-          })}
+          {displayItems.map((item, index) => (
+            <GalleryCard key={item.id} item={item} index={index} />
+          ))}
         </div>
 
         {/* CTA */}

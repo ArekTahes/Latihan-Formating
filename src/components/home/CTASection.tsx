@@ -49,7 +49,7 @@ export default function CTASection() {
           </div>
 
           <p className="text-white/70 mt-6 text-sm">
-            Layanan tersedia Senin - Sabtu, 08:00 - 17:00 WIB
+            Layanan tersedia Senin - Minggu, 08:00 - 17:00 WIB
           </p>
         </motion.div>
       </div>

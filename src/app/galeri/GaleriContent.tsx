@@ -16,10 +16,10 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 export default function GaleriContent() {
   const [selectedImage, setSelectedImage] = useState<typeof galleryData[0] | null>(null)
+  const [errorIds, setErrorIds] = useState<Set<number>>(new Set())
 
-  const getIcon = (item: typeof galleryData[0]) => {
-    const IconComponent = iconMap[(item as any).icon] || Wind
-    return IconComponent
+  const handleImgError = (id: number) => {
+    setErrorIds(prev => new Set(prev).add(id))
   }
 
   return (
@@ -69,9 +69,11 @@ export default function GaleriContent() {
           >
             <AnimatePresence mode="popLayout">
               {galleryData.map((item, index) => {
-                const IconComponent = getIcon(item)
+                const IconComponent = iconMap[(item as any).icon] || Wind
                 const gradient = (item as any).gradient || 'from-primary-400 to-secondary-600'
-                
+                const imageUrl = (item as any).image
+                const hasError = errorIds.has(item.id)
+
                 return (
                   <motion.div
                     key={item.id}
@@ -83,36 +85,45 @@ export default function GaleriContent() {
                     className="group cursor-pointer"
                     onClick={() => setSelectedImage(item)}
                   >
-                    <div 
-                      className="relative overflow-hidden rounded-2xl aspect-square"
-                      role="img"
-                      aria-label={(item as any).alt || item.title}
-                    >
-                      {/* Gradient Background */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-all duration-300 group-hover:scale-105`} />
-                      
-                      {/* Decorative Pattern */}
-                      <div className="absolute inset-0 opacity-10"
-                        style={{
-                          backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                          backgroundSize: '24px 24px'
-                        }}
-                      />
+                    <div className="relative overflow-hidden rounded-2xl aspect-square">
+                      {/* Real Image or Gradient Fallback */}
+                      {imageUrl && !hasError ? (
+                        <img
+                          src={imageUrl}
+                          alt={item.alt || item.title}
+                          onError={() => handleImgError(item.id)}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      ) : (
+                        <>
+                          <div className={`absolute inset-0 bg-gradient-to-br ${gradient} transition-transform duration-500 group-hover:scale-110`} />
+                          <div className="absolute inset-0 opacity-10"
+                            style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <IconComponent className="w-20 h-20 text-white/30" />
+                          </div>
+                        </>
+                      )}
 
-                      {/* Icon */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <IconComponent className="w-20 h-20 text-white/30 transition-transform duration-300 group-hover:scale-110" />
+                      {/* Dark overlay for text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      {/* Hover zoom icon */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          </svg>
+                        </div>
                       </div>
-                      
-                      {/* Content Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                      
+
                       {/* Content */}
                       <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <h3 className="text-white font-semibold mb-1">
+                        <h3 className="text-white font-semibold mb-1 drop-shadow">
                           {item.title}
                         </h3>
-                        <p className="text-gray-200 text-sm">
+                        <p className="text-gray-200 text-sm drop-shadow">
                           {item.category}
                         </p>
                       </div>
@@ -128,9 +139,11 @@ export default function GaleriContent() {
       {/* Lightbox */}
       <AnimatePresence>
         {selectedImage && (() => {
-          const IconComponent = getIcon(selectedImage)
+          const IconComponent = iconMap[(selectedImage as any).icon] || Wind
           const gradient = (selectedImage as any).gradient || 'from-primary-400 to-secondary-600'
-          
+          const imageUrl = (selectedImage as any).image
+          const hasError = errorIds.has(selectedImage.id)
+
           return (
             <motion.div
               initial={{ opacity: 0 }}
@@ -140,7 +153,7 @@ export default function GaleriContent() {
               onClick={() => setSelectedImage(null)}
             >
               <button
-                className="absolute top-4 right-4 p-2 text-white hover:text-gray-300 transition-colors"
+                className="absolute top-4 right-4 p-2 text-white hover:text-gray-300 transition-colors z-10"
                 onClick={() => setSelectedImage(null)}
               >
                 <X className="w-8 h-8" />
@@ -150,19 +163,27 @@ export default function GaleriContent() {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="max-w-4xl w-full"
+                className="max-w-2xl w-full"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="bg-white rounded-2xl overflow-hidden">
-                  {/* Illustrated Header */}
-                  <div className={`relative aspect-video bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-                    <div className="absolute inset-0 opacity-10"
-                      style={{
-                        backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                        backgroundSize: '30px 30px'
-                      }}
-                    />
-                    <IconComponent className="w-32 h-32 text-white/40" />
+                <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                  {/* Image or Gradient */}
+                  <div className="relative aspect-video overflow-hidden">
+                    {imageUrl && !hasError ? (
+                      <img
+                        src={imageUrl}
+                        alt={selectedImage.alt || selectedImage.title}
+                        onError={() => handleImgError(selectedImage.id)}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+                        <div className="absolute inset-0 opacity-10"
+                          style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }}
+                        />
+                        <IconComponent className="w-32 h-32 text-white/40" />
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-secondary-900 mb-2">

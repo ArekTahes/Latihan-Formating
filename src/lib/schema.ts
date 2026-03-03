@@ -2,8 +2,12 @@
 
 const businessInfo = {
   name: 'CV. Arsa Prima Solution',
-  alternateName: ['Arsa Prima Solution', 'CV Arsa Prima', 'Arsa Prima Surabaya'],
-  description: 'Jasa servis AC Surabaya, service kulkas, mesin cuci, freezer, showcase, chiller & instalasi listrik profesional. Teknisi berpengalaman sejak 2014, bergaransi, harga transparan.',
+  alternateName: [
+    'Arsa Prima Solution', 'CV Arsa Prima', 'Arsa Prima Surabaya',
+    'Service AC Arsa Prima', 'Arsa Prima Service AC',
+    'Jasa Service AC Surabaya Arsa Prima', 'Tukang AC Arsa Prima'
+  ],
+  description: 'Jasa servis AC Surabaya, Sidoarjo & Gresik. Service kulkas, mesin cuci, freezer, showcase, chiller & instalasi listrik profesional. Teknisi berpengalaman sejak 2014, bergaransi, harga transparan.',
   url: 'https://arsaprimasolution.com',
   phone: '+6287865502146',
   phone2: '+6287759731023',
@@ -22,7 +26,7 @@ const businessInfo = {
     longitude: 112.72155
   },
   openingHours: [
-    'Mo-Sa 08:00-17:00'
+    'Mo-Su 08:00-17:00'
   ],
   priceRange: 'Rp 50.000 - Rp 5.000.000',
   foundingDate: '2014',
@@ -43,8 +47,20 @@ const businessInfo = {
     'Jasa Listrik'
   ],
   serviceAreas: [
-    'Surabaya Pusat', 'Surabaya Timur', 'Surabaya Barat', 
-    'Surabaya Utara', 'Surabaya Selatan', 'Sidoarjo', 'Gresik'
+    'Surabaya', 'Surabaya Pusat', 'Surabaya Timur', 'Surabaya Barat',
+    'Surabaya Utara', 'Surabaya Selatan', 'Sidoarjo', 'Gresik',
+    // Kecamatan Surabaya
+    'Gubeng', 'Tegalsari', 'Genteng', 'Bubutan', 'Simokerto',
+    'Wonokromo', 'Sawahan', 'Dukuh Pakis', 'Gayungan', 'Jambangan',
+    'Wonocolo', 'Tenggilis Mejoyo', 'Rungkut', 'Gunung Anyar', 'Sukolilo',
+    'Mulyorejo', 'Tambaksari', 'Kenjeran', 'Bulak', 'Semampir',
+    'Pabean Cantikan', 'Krembangan', 'Asemrowo', 'Benowo', 'Pakal',
+    'Lakarsantri', 'Sambikerep', 'Tandes', 'Sukomanunggal', 'Wiyung',
+    'Karangpilang', 'Driyorejo',
+    // Kecamatan Sidoarjo
+    'Waru', 'Gedangan', 'Sedati', 'Buduran', 'Candi', 'Taman', 'Krian',
+    // Kecamatan Gresik
+    'Kebomas', 'Manyar', 'Cerme', 'Driyorejo', 'Menganti'
   ]
 }
 
@@ -75,7 +91,7 @@ export function generateLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         opens: '08:00',
         closes: '17:00'
       }
@@ -83,7 +99,7 @@ export function generateLocalBusinessSchema() {
     priceRange: businessInfo.priceRange,
     currenciesAccepted: 'IDR',
     paymentAccepted: 'Cash, Bank Transfer',
-    image: `${businessInfo.url}/images/og-image.jpg`,
+    image: `${businessInfo.url}/images/og-image.svg`,
     logo: {
       '@type': 'ImageObject',
       url: `${businessInfo.url}/logo.svg`,
@@ -119,10 +135,37 @@ export function generateLocalBusinessSchema() {
       worstRating: '1'
     },
     knowsAbout: [
-      'Service AC', 'Servis AC', 'Cuci AC', 'Isi Freon AC',
-      'Service Kulkas', 'Servis Kulkas', 'Service Mesin Cuci',
-      'Service Freezer', 'Service Showcase', 'Service Chiller',
-      'Instalasi Listrik', 'Panel Listrik', 'Perbaikan Listrik'
+      // Servis AC
+      'Service AC', 'Servis AC', 'Cuci AC', 'Isi Freon AC', 'Ganti Freon AC',
+      'Perbaikan AC', 'AC Tidak Dingin', 'AC Bocor', 'AC Berisik', 'Ganti Kompresor AC',
+      'Pasang AC Baru', 'Bongkar Pasang AC', 'Service AC Split', 'Service AC Inverter',
+      'Service AC Standing Floor', 'Service AC Cassette', 'Service AC Duct',
+      'Service AC Central', 'Service AC Daikin', 'Service AC Panasonic',
+      'Service AC LG', 'Service AC Samsung', 'Service AC Sharp', 'Service AC Gree',
+      'Service AC Mitsubishi', 'Service AC Toshiba', 'Service AC Changhong',
+      'Service AC Kantor', 'Service AC Ruko', 'Service AC Pabrik',
+      // Servis Kulkas
+      'Service Kulkas', 'Servis Kulkas', 'Perbaikan Kulkas', 'Kulkas Tidak Dingin',
+      'Ganti Kompresor Kulkas', 'Isi Freon Kulkas', 'Ganti Thermostat Kulkas',
+      'Service Kulkas 1 Pintu', 'Service Kulkas 2 Pintu', 'Service Kulkas Side by Side',
+      'Service Kulkas Inverter', 'Service Kulkas Samsung', 'Service Kulkas LG',
+      'Service Kulkas Sharp', 'Service Kulkas Polytron', 'Service Kulkas Panasonic',
+      // Servis Mesin Cuci
+      'Service Mesin Cuci', 'Servis Mesin Cuci', 'Perbaikan Mesin Cuci',
+      'Mesin Cuci Tidak Berputar', 'Mesin Cuci Error', 'Ganti Bearing Mesin Cuci',
+      'Ganti Dinamo Mesin Cuci', 'Service Mesin Cuci Top Loading', 'Service Mesin Cuci Front Loading',
+      'Service Mesin Cuci Samsung', 'Service Mesin Cuci LG', 'Service Mesin Cuci Sharp',
+      'Service Mesin Cuci Electrolux', 'Board Mesin Cuci Rusak',
+      // Servis Freezer, Showcase, Chiller
+      'Service Freezer', 'Service Freezer Box', 'Service Showcase', 'Service Display Cooler',
+      'Service Chiller', 'Service Chiller Industri', 'Service Cold Storage',
+      'Service Mesin Es Batu', 'Service Kulkas Dagang',
+      // Instalasi Listrik
+      'Instalasi Listrik', 'Panel Listrik', 'Perbaikan Listrik', 'Jasa Listrik',
+      'Tukang Listrik', 'Pasang MCB', 'Perbaikan Korsleting', 'Listrik Konslet',
+      'Instalasi Listrik Rumah', 'Instalasi Listrik Kantor', 'Instalasi Listrik Ruko',
+      'Tambah Daya Listrik', 'Pasang Stop Kontak', 'Perbaikan Panel Listrik',
+      'Wiring Listrik', 'Instalasi Listrik 3 Phase'
     ]
   }
 }
@@ -175,7 +218,13 @@ export function generateServiceSchema(service: {
     '@type': 'Service',
     '@id': `${businessInfo.url}/layanan/${service.slug}/#service`,
     name: `Jasa ${service.title} Surabaya`,
-    alternateName: [`Servis ${service.title.replace('Service ', '')} Surabaya`, `${service.title} Panggilan Surabaya`],
+    alternateName: [
+      `Servis ${service.title.replace('Service ', '')} Surabaya`,
+      `${service.title} Panggilan Surabaya`,
+      `Jasa ${service.title} Sidoarjo`,
+      `Jasa ${service.title} Gresik`,
+      `${service.title} Terdekat`
+    ],
     description: service.description,
     provider: {
       '@type': 'LocalBusiness',

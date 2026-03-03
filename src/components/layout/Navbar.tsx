@@ -55,7 +55,7 @@ export default function Navbar() {
               {getDisplayNumber()}
             </a>
             <span>|</span>
-            <span>Senin - Sabtu: 08:00 - 17:00</span>
+            <span>Senin - Minggu: 08:00 - 17:00</span>
           </div>
         </div>
       </div>

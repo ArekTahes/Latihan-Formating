@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arsaprimasolution.com'
-  const lastModified = new Date('2026-03-03')
+  const lastModified = new Date('2025-06-18')
 
   const services = [
     { slug: 'service-ac', priority: 0.95 },

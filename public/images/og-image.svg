@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e"/>
+      <stop offset="50%" style="stop-color:#0e7490"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="150" r="200" fill="white" opacity="0.05"/>
+  <circle cx="1100" cy="500" r="120" fill="white" opacity="0.03"/>
+  <circle cx="100" cy="550" r="80" fill="white" opacity="0.04"/>
+
+  <!-- Logo Badge -->
+  <rect x="80" y="80" width="80" height="80" rx="16" fill="url(#accent)"/>
+  <text x="120" y="115" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">AP</text>
+  <text x="120" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle" opacity="0.9">SOL</text>
+
+  <!-- Company Name -->
+  <text x="180" y="115" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="white">CV. Arsa Prima Solution</text>
+  <text x="180" y="145" font-family="Arial,sans-serif" font-size="16" fill="white" opacity="0.8">Jasa Servis Elektronik &amp; Instalasi Listrik Profesional</text>
+
+  <!-- Divider -->
+  <rect x="80" y="200" width="120" height="4" rx="2" fill="#06b6d4"/>
+
+  <!-- Main Title -->
+  <text x="80" y="260" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="white">Jasa Servis AC, Kulkas,</text>
+  <text x="80" y="310" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="white">Mesin Cuci &amp; Instalasi Listrik</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="370" font-family="Arial,sans-serif" font-size="22" fill="white" opacity="0.9">Surabaya • Sidoarjo • Gresik</text>
+
+  <!-- Features -->
+  <text x="80" y="430" font-family="Arial,sans-serif" font-size="18" fill="#67e8f9">✓ Teknisi Berpengalaman 10+ Tahun</text>
+  <text x="80" y="460" font-family="Arial,sans-serif" font-size="18" fill="#67e8f9">✓ Bergaransi &amp; Harga Transparan</text>
+  <text x="80" y="490" font-family="Arial,sans-serif" font-size="18" fill="#67e8f9">✓ Respon Cepat &amp; Buka Setiap Hari</text>
+
+  <!-- CTA -->
+  <rect x="80" y="530" width="280" height="50" rx="25" fill="#06b6d4"/>
+  <text x="220" y="562" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">📞 0878-6550-2146</text>
+
+  <!-- Right side decorative icons -->
+  <text x="750" y="350" font-family="Arial,sans-serif" font-size="140" fill="white" opacity="0.08">❄</text>
+  <text x="950" y="250" font-family="Arial,sans-serif" font-size="100" fill="white" opacity="0.06">⚡</text>
+  <text x="850" y="500" font-family="Arial,sans-serif" font-size="90" fill="white" opacity="0.06">🔧</text>
+</svg>

@@ -17,7 +17,7 @@ const areas = [
 
 const kecamatan = [
   'Sawahan', 'Tegalsari', 'Genteng', 'Bubutan', 'Simokerto',
-  'Kenjeran', 'Semampir', 'Pabean Cantian', 'Krembangan',
+  'Kenjeran', 'Semampir', 'Pabean Cantikan', 'Krembangan',
   'Tambaksari', 'Gubeng', 'Rungkut', 'Tenggilis Mejoyo', 'Gunung Anyar',
   'Sukolilo', 'Mulyorejo', 'Wonokromo', 'Wonocolo', 'Wiyung',
   'Karangpilang', 'Jambangan', 'Gayungan', 'Dukuh Pakis',

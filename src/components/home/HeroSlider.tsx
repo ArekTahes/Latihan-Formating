@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
 import WhatsAppButton from '@/components/whatsapp/WhatsAppButton'
 
 const slides = [
@@ -104,12 +105,12 @@ export default function HeroSlider() {
                   size="lg"
                   params={{ customMessage: 'Halo CV. Arsa Prima Solution, saya ingin konsultasi tentang layanan service elektronik.' }}
                 />
-                <a 
+                <Link 
                   href="/layanan"
                   className="btn-secondary text-lg"
                 >
                   Lihat Layanan Kami
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </AnimatePresence>

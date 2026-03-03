@@ -18,6 +18,7 @@ import {
   Star
 } from 'lucide-react'
 import WhatsAppButton from '@/components/whatsapp/WhatsAppButton'
+import { getDisplayNumber } from '@/components/whatsapp/whatsappGenerator'
 import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import faqData from '@/data/faqs.json'
 
@@ -80,16 +81,16 @@ export default function ServiceDetailContent({ service }: { service: Service }) 
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') }}
       />
       {faqSchema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
         />
       )}
 
@@ -138,11 +139,11 @@ export default function ServiceDetailContent({ service }: { service: Service }) 
                   className="!bg-white !text-green-600 hover:!bg-gray-100 shadow-lg"
                 />
                 <a 
-                  href="tel:087865502146"
+                  href={`tel:${getDisplayNumber().replace(/-/g, '')}`}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/30"
                 >
                   <Phone className="w-5 h-5" />
-                  0878-6550-2146
+                  {getDisplayNumber()}
                 </a>
               </div>
             </motion.div>
@@ -326,7 +327,7 @@ export default function ServiceDetailContent({ service }: { service: Service }) 
                     </p>
                     <p className="flex items-center gap-2">
                       <Clock className="w-4 h-4 text-primary-500" />
-                      Senin - Sabtu, 08:00 - 17:00
+                      Senin - Minggu, 08:00 - 17:00
                     </p>
                   </div>
                 </motion.div>

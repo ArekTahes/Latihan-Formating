@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react'
 import WhatsAppButton from '@/components/whatsapp/WhatsAppButton'
+import { getWhatsAppNumber } from '@/components/whatsapp/whatsappGenerator'
 
 const contactInfo = [
   {
@@ -32,7 +33,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Jam Operasional',
-    content: 'Senin - Sabtu: 08:00 - 17:00 WIB',
+    content: 'Senin - Minggu: 08:00 - 17:00 WIB',
     action: null
   }
 ]
@@ -146,7 +147,18 @@ export default function KontakContent() {
                 <h2 className="text-2xl font-bold text-secondary-900 mb-6">
                   Kirim Pesan
                 </h2>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={(e) => {
+                  e.preventDefault()
+                  const form = e.currentTarget
+                  const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || ''
+                  const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || ''
+                  const service = (form.elements.namedItem('service') as HTMLSelectElement)?.value || ''
+                  const address = (form.elements.namedItem('address') as HTMLInputElement)?.value || ''
+                  const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || ''
+                  const msg = `Halo CV. Arsa Prima Solution,\n\nNama: ${name}\nNo HP: ${phone}\nLayanan: ${service}\nAlamat: ${address}\nPesan: ${message}`
+                  window.open(`https://wa.me/${getWhatsAppNumber()}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
+                  form.reset()
+                }}>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -156,6 +168,7 @@ export default function KontakContent() {
                         type="text"
                         id="name"
                         name="name"
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all"
                         placeholder="Masukkan nama Anda"
                       />
@@ -168,6 +181,7 @@ export default function KontakContent() {
                         type="tel"
                         id="phone"
                         name="phone"
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all"
                         placeholder="08xxxxxxxxxx"
                       />
@@ -181,6 +195,7 @@ export default function KontakContent() {
                     <select
                       id="service"
                       name="service"
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all"
                     >
                       <option value="">Pilih layanan</option>
@@ -225,13 +240,13 @@ export default function KontakContent() {
                     type="submit"
                     className="w-full btn-primary py-4"
                   >
-                    Kirim Pesan
+                    Kirim via WhatsApp
                   </button>
 
                   <p className="text-center text-sm text-gray-500">
                     Atau langsung hubungi kami via{' '}
                     <a 
-                      href="https://wa.me/6287865502146"
+                      href={`https://wa.me/${getWhatsAppNumber()}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-600 font-medium hover:underline"
@@ -270,10 +285,11 @@ export default function KontakContent() {
             className="rounded-2xl overflow-hidden shadow-lg h-96"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8851392726915!2d112.72155!3d-7.2654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc0e9f9f9f9f%3A0x9f9f9f9f9f9f9f9f!2sPetemon%20Kuburan%2C%20Sawahan%2C%20Surabaya!5e0!3m2!1sid!2sid!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.541856697665!2d112.71500!3d-7.26540!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47b%3A0x3027a76e352be40!2sSurabaya%2C+Kota+SBY%2C+Jawa+Timur!5e0!3m2!1sid!2sid!4v1700000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
+              sandbox="allow-scripts allow-same-origin"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

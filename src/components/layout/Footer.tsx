@@ -11,12 +11,12 @@ import {
 import { generateWhatsAppUrl } from '@/components/whatsapp/whatsappGenerator'
 
 const services = [
-  { name: 'Servis AC Surabaya', href: '/layanan/service-ac' },
-  { name: 'Servis Mesin Cuci', href: '/layanan/service-mesin-cuci' },
-  { name: 'Servis Kulkas', href: '/layanan/service-kulkas' },
-  { name: 'Servis Freezer', href: '/layanan/service-freezer' },
-  { name: 'Servis Showcase', href: '/layanan/service-showcase' },
-  { name: 'Servis Chiller', href: '/layanan/service-chiller' },
+  { name: 'Service AC Surabaya', href: '/layanan/service-ac' },
+  { name: 'Service Mesin Cuci', href: '/layanan/service-mesin-cuci' },
+  { name: 'Service Kulkas', href: '/layanan/service-kulkas' },
+  { name: 'Service Freezer', href: '/layanan/service-freezer' },
+  { name: 'Service Showcase', href: '/layanan/service-showcase' },
+  { name: 'Service Chiller', href: '/layanan/service-chiller' },
   { name: 'Instalasi Listrik', href: '/layanan/instalasi-listrik' },
 ]
 
@@ -56,20 +56,20 @@ export default function Footer() {
             </p>
             {/* Social Media */}
             <div className="flex gap-3">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors"
+              <span 
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-default opacity-50"
                 aria-label="Facebook"
+                title="Segera hadir"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors"
+              </span>
+              <span 
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-default opacity-50"
                 aria-label="Instagram"
+                title="Segera hadir"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
+              </span>
               <a 
                 href={generateWhatsAppUrl()}
                 target="_blank"
@@ -149,30 +149,11 @@ export default function Footer() {
               <li className="flex gap-3">
                 <Clock className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <div>
-                  <div>Senin - Sabtu</div>
+                  <div>Senin - Minggu</div>
                   <div>08:00 - 17:00 WIB</div>
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Google Maps Embed */}
-      <div className="border-t border-white/10">
-        <div className="container-custom py-8">
-          <h3 className="text-white font-semibold text-lg mb-4">Lokasi Kami</h3>
-          <div className="rounded-xl overflow-hidden h-64">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8851392726915!2d112.72155!3d-7.2654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc0e9f9f9f9f%3A0x9f9f9f9f9f9f9f9f!2sPetemon%20Kuburan%2C%20Sawahan%2C%20Surabaya!5e0!3m2!1sid!2sid!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Lokasi CV. Arsa Prima Solution"
-            />
           </div>
         </div>
       </div>
