@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Budi Santoso",
+    "location": "Surabaya Barat",
+    "service": "Service AC",
+    "rating": 5,
+    "content": "Pelayanan sangat memuaskan! Teknisi datang tepat waktu dan AC saya kembali dingin maksimal. Harga juga sesuai dengan yang dijanjikan di awal. Sangat recommended!"
+  },
+  {
+    "id": 2,
+    "name": "Ibu Sari",
+    "location": "Sawahan",
+    "service": "Service Mesin Cuci",
+    "rating": 5,
+    "content": "Mesin cuci saya yang sudah rusak 2 minggu akhirnya bisa diperbaiki. Teknisinya ramah dan menjelaskan kerusakan dengan detail. Terima kasih Arsa Prima!"
+  },
+  {
+    "id": 3,
+    "name": "Pak Hendro",
+    "location": "Surabaya Timur",
+    "service": "Service Kulkas",
+    "rating": 5,
+    "content": "Kulkas 2 pintu saya yang tidak dingin sudah normal kembali. Proses perbaikan cepat dan bersih. Garansi 3 bulan membuat saya tenang."
+  },
+  {
+    "id": 4,
+    "name": "Dewi Rahayu",
+    "location": "Surabaya Selatan",
+    "service": "Instalasi Listrik",
+    "rating": 5,
+    "content": "Instalasi listrik rumah baru saya dikerjakan dengan sangat rapi dan profesional. Sesuai standar PLN dan tidak ada masalah sama sekali."
+  },
+  {
+    "id": 5,
+    "name": "Toko Frozen Abadi",
+    "location": "Pabean Cantian",
+    "service": "Service Freezer",
+    "rating": 5,
+    "content": "Freezer box untuk usaha frozen food saya diperbaiki dengan cepat. Tidak sampai mengganggu operasional toko. Pelayanan 24 jam sangat membantu!"
+  },
+  {
+    "id": 6,
+    "name": "Minimarket Jaya",
+    "location": "Gubeng",
+    "service": "Service Showcase",
+    "rating": 5,
+    "content": "Showcase minuman yang rusak langsung ditangani hari itu juga. Teknisi sangat profesional dan harga sangat kompetitif. Pasti langganan di sini!"
+  },
+  {
+    "id": 7,
+    "name": "Pak Agus",
+    "location": "Kenjeran",
+    "service": "Service AC",
+    "rating": 4,
+    "content": "Cuci AC sangat bersih dan teliti. AC jadi lebih dingin dan hemat listrik. Harga terjangkau untuk kualitas yang diberikan."
+  },
+  {
+    "id": 8,
+    "name": "Ibu Ratna",
+    "location": "Wonokromo",
+    "service": "Service Kulkas",
+    "rating": 5,
+    "content": "Kulkas yang tadinya berisik sekarang sudah normal. Teknisi menjelaskan penyebab dan solusinya dengan jelas. Sangat puas dengan pelayanannya."
+  },
+  {
+    "id": 9,
+    "name": "CV. Maju Bersama",
+    "location": "Surabaya Utara",
+    "service": "Service Chiller",
+    "rating": 5,
+    "content": "Chiller pabrik kami bermasalah dan langsung ditangani tim Arsa Prima. Pekerjaan cepat dan hasil memuaskan. Partner terpercaya untuk maintenance."
+  }
+]

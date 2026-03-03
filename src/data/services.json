@@ -1,0 +1,212 @@
+[
+  {
+    "id": "service-ac",
+    "title": "Service AC",
+    "slug": "service-ac",
+    "shortDescription": "Perbaikan, perawatan, dan instalasi AC segala merk.",
+    "fullDescription": "Layanan service AC profesional meliputi perbaikan, perawatan rutin, dan instalasi AC baru untuk semua merk dan tipe. Tim teknisi kami berpengalaman menangani berbagai masalah AC seperti AC tidak dingin, bocor, berisik, dan mati total.",
+    "icon": "Wind",
+    "image": "/images/services/service-ac.jpg",
+    "services": [
+      "Cuci AC (cleaning indoor & outdoor)",
+      "Isi freon / tambah freon",
+      "Perbaikan kompresor",
+      "Ganti kapasitor",
+      "Perbaikan PCB / modul",
+      "Service remote AC",
+      "Instalasi AC baru",
+      "Pindah AC / relokasi",
+      "Cek dan perbaikan kebocoran",
+      "Ganti thermostat"
+    ],
+    "benefits": [
+      "Teknisi bersertifikat dan berpengalaman",
+      "Garansi service hingga 3 bulan",
+      "Spare part original dan berkualitas",
+      "Harga transparan, tidak ada biaya tersembunyi",
+      "Respon cepat, bisa datang hari yang sama"
+    ],
+    "brands": ["Daikin", "Panasonic", "LG", "Samsung", "Sharp", "Gree", "Midea", "Changhong", "Polytron", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 50.000"
+  },
+  {
+    "id": "service-mesin-cuci",
+    "title": "Service Mesin Cuci",
+    "slug": "service-mesin-cuci",
+    "shortDescription": "Perbaikan mesin cuci top loading & front loading semua merk.",
+    "fullDescription": "Layanan perbaikan mesin cuci untuk semua jenis dan merk. Kami menangani mesin cuci top loading, front loading, dan 2 tabung dengan berbagai masalah seperti tidak mau berputar, tidak bisa buang air, error, dan kerusakan lainnya.",
+    "icon": "WashingMachine",
+    "image": "/images/services/service-mesin-cuci.jpg",
+    "services": [
+      "Perbaikan motor penggerak",
+      "Ganti belt / V-belt",
+      "Perbaikan pompa air",
+      "Service timer dan modul",
+      "Perbaikan tabung bocor",
+      "Ganti bearing dan seal",
+      "Perbaikan sistem drain",
+      "Ganti gearbox",
+      "Perbaikan door lock (front loading)",
+      "Reset error dan kalibrasi"
+    ],
+    "benefits": [
+      "Teknisi ahli mesin cuci semua merk",
+      "Garansi service 1-3 bulan",
+      "Spare part tersedia lengkap",
+      "Diagnosa kerusakan akurat",
+      "Biaya terjangkau dan transparan"
+    ],
+    "brands": ["Samsung", "LG", "Panasonic", "Sharp", "Electrolux", "Aqua", "Polytron", "Sanken", "Modena", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 75.000"
+  },
+  {
+    "id": "service-kulkas",
+    "title": "Service Kulkas",
+    "slug": "service-kulkas",
+    "shortDescription": "Perbaikan kulkas 1 pintu, 2 pintu, dan side by side.",
+    "fullDescription": "Layanan service kulkas profesional untuk semua tipe kulkas rumah tangga. Menangani masalah kulkas tidak dingin, terlalu dingin, berisik, lampu tidak menyala, dan berbagai kerusakan lainnya.",
+    "icon": "Refrigerator",
+    "image": "/images/services/service-kulkas.jpg",
+    "services": [
+      "Isi freon kulkas",
+      "Ganti kompresor",
+      "Perbaikan thermostat",
+      "Ganti timer defrost",
+      "Perbaikan evaporator",
+      "Ganti fan motor",
+      "Perbaikan door seal / karet pintu",
+      "Service panel kontrol digital",
+      "Perbaikan sistem kelistrikan",
+      "Cek dan perbaikan kebocoran"
+    ],
+    "benefits": [
+      "Pengalaman lebih dari 10 tahun",
+      "Garansi service 1-3 bulan",
+      "Freon original berkualitas",
+      "Diagnosa cepat dan akurat",
+      "Harga bersaing"
+    ],
+    "brands": ["Samsung", "LG", "Panasonic", "Sharp", "Toshiba", "Hitachi", "Aqua", "Polytron", "Sanyo", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 100.000"
+  },
+  {
+    "id": "service-freezer",
+    "title": "Service Freezer Box",
+    "slug": "service-freezer",
+    "shortDescription": "Perbaikan freezer box untuk rumah tangga dan usaha.",
+    "fullDescription": "Layanan service freezer box untuk kebutuhan penyimpanan makanan beku. Cocok untuk rumah tangga maupun usaha seperti toko es krim, frozen food, dan UMKM kuliner.",
+    "icon": "Snowflake",
+    "image": "/images/services/service-freezer.jpg",
+    "services": [
+      "Isi freon freezer",
+      "Ganti kompresor freezer",
+      "Perbaikan thermostat",
+      "Ganti relay dan overload",
+      "Perbaikan sistem pendingin",
+      "Ganti karet pintu / door seal",
+      "Perbaikan engsel pintu",
+      "Cek dan perbaikan kebocoran",
+      "Perawatan rutin freezer",
+      "Instalasi freezer baru"
+    ],
+    "benefits": [
+      "Spesialis freezer box semua ukuran",
+      "Garansi service 1-3 bulan",
+      "Cocok untuk UMKM dan rumah tangga",
+      "Spare part berkualitas",
+      "Respon cepat"
+    ],
+    "brands": ["GEA", "Modena", "Sanyo", "Sharp", "Panasonic", "Aqua", "RSA", "Sansio", "Frigigate", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 150.000"
+  },
+  {
+    "id": "service-showcase",
+    "title": "Service Showcase",
+    "slug": "service-showcase",
+    "shortDescription": "Perbaikan showcase minuman, makanan, dan display pendingin.",
+    "fullDescription": "Layanan service showcase display pendingin untuk toko, minimarket, dan usaha kuliner. Menangani showcase minuman, showcase kue, showcase daging, dan berbagai jenis display cooler.",
+    "icon": "MonitorSpeaker",
+    "image": "/images/services/service-showcase.jpg",
+    "services": [
+      "Isi freon showcase",
+      "Ganti kompresor",
+      "Perbaikan thermostat digital",
+      "Ganti lampu showcase",
+      "Perbaikan fan evaporator",
+      "Ganti karet pintu kaca",
+      "Perbaikan panel kontrol",
+      "Service sistem defrost",
+      "Perbaikan kelistrikan",
+      "Perawatan rutin showcase"
+    ],
+    "benefits": [
+      "Pengalaman service showcase komersial",
+      "Garansi service 1-3 bulan",
+      "Cocok untuk toko dan minimarket",
+      "Teknisi profesional",
+      "Spare part original"
+    ],
+    "brands": ["GEA", "Modena", "Sanden", "RSA", "Polytron", "Sharp", "Sanyo", "Crown", "Starcool", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 200.000"
+  },
+  {
+    "id": "service-chiller",
+    "title": "Service Chiller",
+    "slug": "service-chiller",
+    "shortDescription": "Perbaikan dan perawatan chiller untuk industri dan komersial.",
+    "fullDescription": "Layanan service chiller untuk kebutuhan pendinginan industri dan komersial. Meliputi perbaikan, perawatan, dan instalasi sistem chiller dengan berbagai kapasitas.",
+    "icon": "ThermometerSnowflake",
+    "image": "/images/services/service-chiller.jpg",
+    "services": [
+      "Perbaikan sistem kompresor chiller",
+      "Service kondensor dan evaporator",
+      "Isi refrigerant chiller",
+      "Perbaikan panel kontrol",
+      "Service pompa sirkulasi",
+      "Cek dan perbaikan kebocoran",
+      "Perawatan berkala chiller",
+      "Kalibrasi sistem kontrol",
+      "Cleaning sistem chiller",
+      "Instalasi chiller baru"
+    ],
+    "benefits": [
+      "Teknisi berpengalaman industri",
+      "Garansi service sesuai kesepakatan",
+      "Handling chiller kapasitas besar",
+      "Perawatan preventif tersedia",
+      "Konsultasi gratis"
+    ],
+    "brands": ["Carrier", "Trane", "Daikin", "York", "McQuay", "Hitachi", "LG", "Gree", "Midea", "Dan lainnya"],
+    "priceRange": "Hubungi untuk penawaran"
+  },
+  {
+    "id": "instalasi-listrik",
+    "title": "Instalasi Listrik",
+    "slug": "instalasi-listrik",
+    "shortDescription": "Perbaikan dan pemasangan instalasi listrik rumah dan gedung.",
+    "fullDescription": "Layanan instalasi listrik profesional untuk rumah, kantor, dan gedung. Meliputi pemasangan baru, perbaikan, dan penambahan daya listrik sesuai standar keamanan PLN.",
+    "icon": "Zap",
+    "image": "/images/services/instalasi-listrik.jpg",
+    "services": [
+      "Pemasangan instalasi listrik baru",
+      "Perbaikan instalasi listrik",
+      "Penambahan daya listrik",
+      "Pemasangan MCB dan panel listrik",
+      "Instalasi stop kontak dan saklar",
+      "Pemasangan lampu dan fitting",
+      "Perbaikan korsleting listrik",
+      "Instalasi grounding",
+      "Pemasangan stabilizer",
+      "Konsultasi kelistrikan"
+    ],
+    "benefits": [
+      "Instalasi sesuai standar PLN",
+      "Teknisi berlisensi",
+      "Material berkualitas SNI",
+      "Aman dan terjamin",
+      "Garansi pekerjaan"
+    ],
+    "brands": ["Schneider", "Legrand", "Panasonic", "Broco", "Clipsal", "Hager", "ABB", "Siemens", "Dan lainnya"],
+    "priceRange": "Mulai dari Rp 500.000"
+  }
+]

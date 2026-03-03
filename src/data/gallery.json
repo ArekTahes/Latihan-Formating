@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Servis AC Split Rumah Surabaya",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-blue-500 to-cyan-500",
+    "alt": "Ilustrasi servis AC split di rumah pelanggan Surabaya - CV Arsa Prima Solution",
+    "description": "Jasa servis AC split rumah tangga oleh teknisi berpengalaman CV. Arsa Prima Solution Surabaya."
+  },
+  {
+    "id": 2,
+    "title": "Cuci AC & Isi Freon Surabaya",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-sky-400 to-blue-600",
+    "alt": "Ilustrasi cuci AC dan isi freon profesional di Surabaya oleh CV Arsa Prima Solution",
+    "description": "Layanan cuci AC dan pengisian freon profesional untuk rumah dan kantor di Surabaya."
+  },
+  {
+    "id": 3,
+    "title": "Perbaikan AC Tidak Dingin",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-cyan-500 to-teal-500",
+    "alt": "Ilustrasi perbaikan AC tidak dingin oleh teknisi AC Surabaya",
+    "description": "Penanganan masalah AC tidak dingin dengan diagnosa akurat dan perbaikan bergaransi."
+  },
+  {
+    "id": 4,
+    "title": "Pemasangan AC Baru Surabaya",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-blue-600 to-indigo-500",
+    "alt": "Ilustrasi jasa pasang AC baru di Surabaya",
+    "description": "Jasa pemasangan AC baru untuk rumah, kantor, dan ruko di wilayah Surabaya dan sekitarnya."
+  },
+  {
+    "id": 5,
+    "title": "Service AC Standing Floor",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-blue-400 to-sky-600",
+    "alt": "Ilustrasi service AC standing floor di Surabaya",
+    "description": "Servis dan perawatan AC standing floor untuk ruangan besar di Surabaya."
+  },
+  {
+    "id": 6,
+    "title": "Bongkar Pasang AC Surabaya",
+    "category": "Servis AC",
+    "icon": "Wind",
+    "gradient": "from-indigo-400 to-blue-600",
+    "alt": "Ilustrasi jasa bongkar pasang AC pindahan di Surabaya",
+    "description": "Layanan bongkar pasang AC untuk pindahan rumah dan kantor di Surabaya & sekitarnya."
+  },
+  {
+    "id": 7,
+    "title": "Service Kulkas Tidak Dingin",
+    "category": "Servis Kulkas",
+    "icon": "Refrigerator",
+    "gradient": "from-green-500 to-teal-500",
+    "alt": "Ilustrasi servis kulkas tidak dingin di Surabaya",
+    "description": "Jasa servis kulkas tidak dingin, bocor, dan berisik dengan penanganan cepat di Surabaya."
+  },
+  {
+    "id": 8,
+    "title": "Perbaikan Kompresor Kulkas",
+    "category": "Servis Kulkas",
+    "icon": "Refrigerator",
+    "gradient": "from-teal-500 to-emerald-500",
+    "alt": "Ilustrasi perbaikan kompresor kulkas di Surabaya",
+    "description": "Perbaikan dan penggantian kompresor kulkas berbagai merk di Surabaya."
+  },
+  {
+    "id": 9,
+    "title": "Servis Kulkas 2 Pintu Surabaya",
+    "category": "Servis Kulkas",
+    "icon": "Refrigerator",
+    "gradient": "from-emerald-500 to-green-600",
+    "alt": "Ilustrasi servis kulkas 2 pintu di Surabaya",
+    "description": "Servis kulkas 2 pintu semua merk dengan garansi oleh CV. Arsa Prima Solution Surabaya."
+  },
+  {
+    "id": 10,
+    "title": "Instalasi Listrik Rumah Surabaya",
+    "category": "Instalasi Listrik",
+    "icon": "Zap",
+    "gradient": "from-yellow-500 to-orange-500",
+    "alt": "Ilustrasi jasa instalasi listrik rumah di Surabaya",
+    "description": "Jasa instalasi dan perbaikan listrik rumah dengan standar keamanan tinggi di Surabaya."
+  },
+  {
+    "id": 11,
+    "title": "Perbaikan Instalasi Listrik",
+    "category": "Instalasi Listrik",
+    "icon": "Zap",
+    "gradient": "from-orange-500 to-amber-500",
+    "alt": "Ilustrasi perbaikan instalasi listrik profesional Surabaya",
+    "description": "Perbaikan instalasi listrik rumah dan kantor oleh teknisi bersertifikat di Surabaya."
+  },
+  {
+    "id": 12,
+    "title": "Service Mesin Cuci Surabaya",
+    "category": "Servis Mesin Cuci",
+    "icon": "WashingMachine",
+    "gradient": "from-purple-500 to-pink-500",
+    "alt": "Ilustrasi servis mesin cuci di Surabaya",
+    "description": "Jasa servis mesin cuci top loading dan front loading semua merk di Surabaya dan sekitarnya."
+  }
+]
