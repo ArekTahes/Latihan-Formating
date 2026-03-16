@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://arsaprimasolution.com'
-  const lastModified = new Date('2025-06-18')
+  const lastModified = new Date('2026-03-16')
 
   const services = [
     { slug: 'service-ac', priority: 0.95 },
@@ -50,6 +50,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/servis-ac-surabaya`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/servis-mesin-cuci-surabaya`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/servis-kulkas-surabaya`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/instalasi-listrik-surabaya`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
   ]
 

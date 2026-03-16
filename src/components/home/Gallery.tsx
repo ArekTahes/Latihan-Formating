@@ -16,9 +16,9 @@ const iconMap: { [key: string]: React.ElementType } = {
 
 function GalleryCard({ item, index }: { item: typeof galleryData[0], index: number }) {
   const [imgError, setImgError] = useState(false)
-  const IconComponent = iconMap[(item as any).icon] || Wind
-  const gradient = (item as any).gradient || 'from-primary-400 to-secondary-600'
-  const imageUrl = (item as any).image
+  const IconComponent = iconMap[item.icon] || Wind
+  const gradient = item.gradient || 'from-primary-400 to-secondary-600'
+  const imageUrl = item.image
 
   return (
     <motion.div
@@ -33,7 +33,10 @@ function GalleryCard({ item, index }: { item: typeof galleryData[0], index: numb
       {imageUrl && !imgError ? (
         <img
           src={imageUrl}
-          alt={item.alt || item.title}
+          alt={item.alt || `${item.title} - servis ac surabaya teknisi profesional`}
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           onError={() => setImgError(true)}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />

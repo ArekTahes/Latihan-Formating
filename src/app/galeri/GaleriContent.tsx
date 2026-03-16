@@ -69,9 +69,9 @@ export default function GaleriContent() {
           >
             <AnimatePresence mode="popLayout">
               {galleryData.map((item, index) => {
-                const IconComponent = iconMap[(item as any).icon] || Wind
-                const gradient = (item as any).gradient || 'from-primary-400 to-secondary-600'
-                const imageUrl = (item as any).image
+                const IconComponent = iconMap[item.icon] || Wind
+                const gradient = item.gradient || 'from-primary-400 to-secondary-600'
+                const imageUrl = item.image
                 const hasError = errorIds.has(item.id)
 
                 return (
@@ -90,7 +90,10 @@ export default function GaleriContent() {
                       {imageUrl && !hasError ? (
                         <img
                           src={imageUrl}
-                          alt={item.alt || item.title}
+                          alt={item.alt || `${item.title} - servis ac surabaya teknisi memperbaiki ac rumah`}
+                          loading="lazy"
+                          decoding="async"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                           onError={() => handleImgError(item.id)}
                           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />
@@ -139,9 +142,9 @@ export default function GaleriContent() {
       {/* Lightbox */}
       <AnimatePresence>
         {selectedImage && (() => {
-          const IconComponent = iconMap[(selectedImage as any).icon] || Wind
-          const gradient = (selectedImage as any).gradient || 'from-primary-400 to-secondary-600'
-          const imageUrl = (selectedImage as any).image
+          const IconComponent = iconMap[selectedImage.icon] || Wind
+          const gradient = selectedImage.gradient || 'from-primary-400 to-secondary-600'
+          const imageUrl = selectedImage.image
           const hasError = errorIds.has(selectedImage.id)
 
           return (
@@ -172,7 +175,9 @@ export default function GaleriContent() {
                     {imageUrl && !hasError ? (
                       <img
                         src={imageUrl}
-                        alt={selectedImage.alt || selectedImage.title}
+                        alt={selectedImage.alt || `${selectedImage.title} - dokumentasi layanan servis ac surabaya`}
+                        decoding="async"
+                        sizes="(max-width: 768px) 100vw, 800px"
                         onError={() => handleImgError(selectedImage.id)}
                         className="w-full h-full object-cover"
                       />
