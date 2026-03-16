@@ -20,6 +20,7 @@ import {
 import WhatsAppButton from '@/components/whatsapp/WhatsAppButton'
 import { getDisplayNumber } from '@/components/whatsapp/whatsappGenerator'
 import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { featuredSurabayaLocations, formatSurabayaLocation } from '@/lib/surabayaLocations'
 import faqData from '@/data/faqs.json'
 
 interface Service {
@@ -59,6 +60,7 @@ const colorMap: { [key: string]: string } = {
 export default function ServiceDetailContent({ service }: { service: Service }) {
   const IconComponent = iconMap[service.icon] || Wind
   const colorClass = colorMap[service.id] || 'from-primary-500 to-accent-500'
+  const acDistrictLinks = featuredSurabayaLocations.slice(0, 9)
 
   const faqs = (faqData as Record<string, Array<{ question: string; answer: string }>>)[service.slug] || []
 
@@ -281,6 +283,33 @@ export default function ServiceDetailContent({ service }: { service: Service }) 
                   ))}
                 </div>
               </motion.div>
+
+              {service.slug === 'service-ac' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl p-8 shadow-lg"
+                >
+                  <h2 className="text-2xl font-bold text-secondary-900 mb-4">
+                    Servis AC Per Kecamatan Surabaya
+                  </h2>
+                  <p className="text-gray-600 mb-6">
+                    Pilih halaman area terdekat untuk informasi layanan servis AC yang lebih spesifik di kecamatan Anda.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    {acDistrictLinks.map((lokasi) => (
+                      <Link
+                        key={lokasi}
+                        href={`/servis-ac-${lokasi}`}
+                        className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:border-primary-300 hover:text-primary-700 transition-colors"
+                      >
+                        Servis AC {formatSurabayaLocation(lokasi)}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
             </div>
 
             {/* Sidebar */}

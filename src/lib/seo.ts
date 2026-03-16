@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 const siteConfig = {
   name: 'CV. Arsa Prima Solution',
   description: 'Jasa servis AC Surabaya Sidoarjo Gresik, service kulkas, mesin cuci, freezer, showcase, chiller & instalasi listrik profesional. Teknisi berpengalaman, bergaransi, harga murah.',
-  url: 'https://arsaprimasolution.com',
+  url: 'https://servisacsurabaya.com',
   ogImage: '/images/og-image.svg',
   phone: '087865502146',
   phone2: '087759731023',

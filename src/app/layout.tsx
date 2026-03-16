@@ -114,14 +114,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://arsaprimasolution.com'),
+  metadataBase: new URL('https://servisacsurabaya.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Jasa Servis AC Surabaya | Service AC, Kulkas, Mesin Cuci - CV. Arsa Prima Solution',
     description: 'Jasa servis AC Surabaya, service kulkas, mesin cuci, freezer, showcase, chiller & instalasi listrik profesional. Teknisi berpengalaman, bergaransi, harga transparan.',
-    url: 'https://arsaprimasolution.com',
+    url: 'https://servisacsurabaya.com',
     siteName: 'CV. Arsa Prima Solution - Jasa Servis Elektronik Surabaya',
     locale: 'id_ID',
     type: 'website',

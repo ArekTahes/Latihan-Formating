@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generatePageSEO } from '@/lib/seo'
 import { generateLocalBusinessSchema, generateWebPageSchema } from '@/lib/schema'
+import { featuredSurabayaLocations, formatSurabayaLocation } from '@/lib/surabayaLocations'
 
 export const metadata: Metadata = generatePageSEO({
   title: 'Servis AC Surabaya Murah & Bergaransi - Teknisi AC Panggilan Profesional',
@@ -129,6 +130,27 @@ export default function ServisACSurabayaPage() {
             tetap bekerja stabil. Dengan kombinasi penggunaan yang tepat dan perawatan berkala, kenyamanan ruangan
             akan terjaga, umur komponen lebih panjang, serta tagihan listrik dapat ditekan secara signifikan.
           </p>
+        </section>
+
+        <section aria-labelledby="servis-ac-kecamatan" className="space-y-4">
+          <h2 id="servis-ac-kecamatan" className="text-2xl font-semibold text-secondary-900">
+            Halaman Servis AC Per Kecamatan Surabaya
+          </h2>
+          <p>
+            Untuk kebutuhan pencarian lokal yang lebih spesifik, kami menyediakan halaman layanan berdasarkan kecamatan.
+            Pilih area terdekat Anda agar informasi servis lebih relevan dan proses pemesanan teknisi lebih cepat.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {featuredSurabayaLocations.map((lokasi) => (
+              <Link
+                key={lokasi}
+                href={`/servis-ac-${lokasi}`}
+                className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 hover:border-primary-300 hover:text-primary-700 transition-colors"
+              >
+                Servis AC {formatSurabayaLocation(lokasi)}
+              </Link>
+            ))}
+          </div>
         </section>
 
         <section aria-labelledby="internal-links" className="space-y-4">

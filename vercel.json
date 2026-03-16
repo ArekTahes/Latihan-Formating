@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    {
+      "source": "/servis-ac-:lokasi",
+      "destination": "/servis-ac/:lokasi"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

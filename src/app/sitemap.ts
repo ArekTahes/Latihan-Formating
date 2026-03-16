@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { surabayaLocations } from '@/lib/surabayaLocations'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arsaprimasolution.com'
+  const baseUrl = 'https://servisacsurabaya.com'
   const lastModified = new Date('2026-03-16')
 
   const services = [
@@ -84,5 +85,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }))
 
-  return [...staticPages, ...servicePages]
+  const acLocationPages: MetadataRoute.Sitemap = surabayaLocations.map((lokasi) => ({
+    url: `${baseUrl}/servis-ac-${lokasi}`,
+    lastModified,
+    changeFrequency: 'weekly',
+    priority: 0.88,
+  }))
+
+  return [...staticPages, ...servicePages, ...acLocationPages]
 }

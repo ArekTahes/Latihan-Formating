@@ -8,7 +8,7 @@ const businessInfo = {
     'Jasa Service AC Surabaya Arsa Prima', 'Tukang AC Arsa Prima'
   ],
   description: 'Jasa servis AC Surabaya, Sidoarjo & Gresik. Service kulkas, mesin cuci, freezer, showcase, chiller & instalasi listrik profesional. Teknisi berpengalaman sejak 2014, bergaransi, harga transparan.',
-  url: 'https://arsaprimasolution.com',
+  url: 'https://servisacsurabaya.com',
   phone: '+6287865502146',
   phone2: '+6287759731023',
   whatsapp: '087865502146',

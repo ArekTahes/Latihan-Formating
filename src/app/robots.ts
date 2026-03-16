@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://arsaprimasolution.com/sitemap.xml',
-    host: 'https://arsaprimasolution.com',
+    sitemap: 'https://servisacsurabaya.com/sitemap.xml',
+    host: 'https://servisacsurabaya.com',
   }
 }
